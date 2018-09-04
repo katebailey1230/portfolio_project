@@ -3,12 +3,12 @@
 <html lang="en">
 
   <head>
-    {% load staticfiles %}
+    {% load static %}
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="../../../../favicon.ico">
+
 
     <title>Kate Bailey</title>
 
@@ -28,7 +28,7 @@
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav ml-auto">
             <a class="nav-item nav-link" href="https://www.linkedin.com/in/katherine-p-bailey">LinkedIn</a>
-            <a class="nav-item nav-link" href="{% static 'Resumé.pdf' %}">Resume</a>
+            <a class="nav-item nav-link" href="{% static 'kbaileyresume.pdf' %}">Resume</a>
             <a class="nav-item nav-link" href="{% url 'allblogs' %}">Blog</a>
           </div>
         </div>
@@ -44,7 +44,7 @@
           <p>
             <a href="mailto:katebailey1230@gmail.com" class="btn btn-primary my-2">Email Me</a>
           </p>
-          <img src="{% static 'kate_maine.jpeg' %}" />
+          <img src="{% static 'kate_maine.jpg' %}" height="300" />
         </div>
       </section>
 
