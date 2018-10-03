@@ -3,7 +3,7 @@
 <html lang="en">
 
   <head>
-    {% load static %}
+    {% load staticfiles %}
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
@@ -28,7 +28,7 @@
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav ml-auto">
             <a class="nav-item nav-link" href="https://www.linkedin.com/in/katherine-p-bailey">LinkedIn</a>
-            <a class="nav-item nav-link" href="{% static 'kbaileyresume.pdf' %}">Resume</a>
+            <a class="nav-item nav-link" href="{% static 'KatherineBailey.pdf' %}">Resume</a>
             <a class="nav-item nav-link" href="{% url 'allblogs' %}">Blog</a>
           </div>
         </div>
@@ -44,7 +44,13 @@
           <p>
             <a href="mailto:katebailey1230@gmail.com" class="btn btn-primary my-2">Email Me</a>
           </p>
-          <img src="{% static 'kate_maine.jpg' %}" height="300" />
+          <img src="{% static 'kate_maine.jpg' %}" height="200"/>
+        </div>
+      </section>
+
+      <section class="jumbotron text-center">
+        <div class="container">
+          <h3 class="jumbotron-heading">Projects</h3>
         </div>
       </section>
 
@@ -56,12 +62,13 @@
             {% for job in jobs.all %}
             <div class="col-md-4">
               <div class="card mb-4 box-shadow">
-                <img class="card-img-top" src="{{ job.image.url }}">
-                <div class="card-body">
-                  <p class="card-text">{{ job.summary }}</p>
+                <img class="card-img-top" style="border:3px solid black" src="{{ job.image.url }}">
+                <div class="card-body" style="background-color:Gray">
+                  <p class="card-text" style="color:White">{{ job.summary }}</p>
                 </div>
               </div>
             </div>
+
             {% endfor %}
 
           </div>
